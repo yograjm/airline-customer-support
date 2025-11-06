@@ -21,30 +21,6 @@ try:
     conn = psycopg2.connect(**db_params)
     cursor = conn.cursor()
 
-    # Read existing data from the table
-#        query = "SELECT * FROM titanic;"  # SQL query to select all data from the table
-#        cursor.execute(query)
-
-
-    # Fetch all results
-#    rows = cursor.fetchall()
-    # Get column names from the cursor
-#    column_names = [desc[0] for desc in cursor.description]
-    # Create a DataFrame from the fetched data
-#    df = pd.DataFrame(rows, columns=column_names)
-#    print(f"Existing rows in db: {len(df)}")
-    # Display the DataFrame
-    #print(df)
-
-    # Next Row to add to db
-#    curr_rows = len(df)
-#    if curr_rows >= len(data):
-#        curr_rows = curr_rows - len(data)
-    # Insert data into the passengers table
-    #row_to_add = data.iloc[[curr_rows], :]     # add row one-by-one
-    #row_to_add = data.iloc[curr_rows:]        # add all rows at once
-    # print(row_to_add)
-    #count = 0
     for index, row in data.iterrows():
         cursor.execute(
             sql.SQL("""

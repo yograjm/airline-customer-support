@@ -1,6 +1,6 @@
 # Airline Customer Support System
 
-## Steps
+## Steps to Follow
 
 1. Create a new GitHub repository
 
